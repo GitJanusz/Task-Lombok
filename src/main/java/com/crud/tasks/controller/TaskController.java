@@ -22,6 +22,10 @@ public class TaskController {
         List<Task> tasks = service.getAllTasks();
         return taskMapper.mapToTaskDtoList(tasks);
     }
+    @RequestMapping(method = RequestMethod.GET, value = "getTaskById")
+    public Optional<Task> getTaskById() {
+        return service.getTaskById(1L);
+    }
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
     public TaskDto getTask(Long taskId) {
         return new TaskDto(1L, "test title", "test_content");
