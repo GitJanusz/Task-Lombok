@@ -24,8 +24,8 @@ public class TaskController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getTaskById")
-    public Optional<Task> getTaskById() {
-        return service.getTaskById(1L);
+    public Optional<Task> getTaskById(@RequestParam Long taskId) {
+        return service.getTaskById(taskId);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
