@@ -17,6 +17,11 @@ public class TrelloController {
 
     private final TrelloClient trelloClient;
 
+    @GetMapping("getTrelloBoards")
+    public List<TrelloBoardDto> getTrelloBoards() {
+        return trelloClient.getTrelloBoards();
+    }
+
 //    @GetMapping("getTrelloBoards")
 //    public void getTrelloBoards() {
 //

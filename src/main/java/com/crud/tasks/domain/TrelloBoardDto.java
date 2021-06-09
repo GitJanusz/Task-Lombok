@@ -6,7 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //@Getter
@@ -14,6 +16,8 @@ import java.util.List;
 //@NoArgsConstructor
 //powyższe adnotacje można zastąpić jedną \/
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TrelloBoardDto {
     @JsonProperty("id")
